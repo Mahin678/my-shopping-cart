@@ -65,7 +65,7 @@ plusBtn1.addEventListener("click", function(event){
 // }
 //  const subTotal = adds("subTotal");
 //  const totalTax = adds("tax");
-//  const Total = adds("total");
+//  const Total = adds("total"); 
   
 //  const totalFinal =
 //      const totalAmount = subTotal+totalTax+Total;
