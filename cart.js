@@ -1,9 +1,8 @@
 // product 1
 //plus button
-const  plusBtn  = document.getElementById("increaseBtn","decreaseBtn");
+const  plusBtn  = document.getElementById("increaseBtn");
 plusBtn.addEventListener("click", function(event){
     processNumber("inputAmount" , "insideTotal", 1 , 100 );
-    
  })
  
 //minsBtn 
@@ -35,6 +34,20 @@ plusBtn1.addEventListener("click", function(event){
   
     return totalValue;
 }
+  const checkout = document.getElementById("increaseBtn");
+  const FnBtn  = document.addEventListener("click", function(){
+      const get1Number =  document.getElementById("insideTotal").innerText;
+      const correctNum = parseFloat(get1Number);
+      const get2Number = document.getElementById("insideTotal1").innerText;
+      const currentNum2 = parseFloat(get2Number);
+      const result = correctNum+currentNum2 ; 
+      const totalTax = result / 50;
+      const finallyTotal = totalTax + result;
+      document.getElementById("subTotal").innerText=result;
+      document.getElementById("tax").innerText=totalTax ;
+      document.getElementById("fTotal").innerText=finallyTotal;
+  })
+
 
 //  const firstValue = minsBtn + minsBtn;
 //  console.log(firstValue)
@@ -61,15 +74,24 @@ plusBtn1.addEventListener("click", function(event){
 
 
 // this is for relation with input and inside board 
-  function myFunction() {
-    var values =  document.getElementById("inputAmount").value;
+  function myFunction(id , id2,num) {
+    var values =  document.getElementById(id).value;
     var check  = parseFloat(values);
-      document.getElementById("insideTotal").innerText=check * 100;
+      document.getElementById(id2).innerText=check * num;
+      document.getElementById("subTotal").innerText= check * num;
     }
 
+   
 
  
-
+    function totalW(ids,ids1){
+        var mobileTotalPrice = document.getElementById(ids).innerText;
+        mobileTotalPrice = parseFloat(mobileTotalPrice);
+        var caseTotalPrice = document.getElementById(ids1).innerText;
+        caseTotalPrice = parseFloat(caseTotalPrice);
+        var total = mobileTotalPrice + caseTotalPrice;
+        return total;
+    }
 
 
 
